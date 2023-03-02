@@ -1,0 +1,7 @@
+{
+  "name": "capacitor-share-plugins-bugs",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue"
+}
