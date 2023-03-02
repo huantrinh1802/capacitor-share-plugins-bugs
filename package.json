@@ -13,7 +13,9 @@
     "@capacitor/app": "4.1.1",
     "@capacitor/core": "4.7.0",
     "@capacitor/haptics": "4.1.0",
+    "@capacitor/ios": "4.7.0",
     "@capacitor/keyboard": "4.1.1",
+    "@capacitor/share": "^4.1.1",
     "@capacitor/status-bar": "4.1.1",
     "@ionic/vue": "^6.0.0",
     "@ionic/vue-router": "^6.0.0",
@@ -45,5 +47,8 @@
     "ts-jest": "^27.0.7",
     "typescript": "^4.3.5"
   },
-  "description": "An Ionic project"
+  "description": "An Ionic project",
+  "volta": {
+    "node": "16.16.0"
+  }
 }

@@ -1,16 +1,35 @@
 <template>
   <div id="container">
     <strong>{{ name }}</strong>
-    <p>Explore <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <p>Explore 
+      <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI
+        Components
+      </a>
+    </p>
+    <IonButton @click="shareTheCode">Share</IonButton>
   </div>
 </template>
 
 <script setup lang="ts">
+import { Share } from '@capacitor/share';
+import { IonButton } from '@ionic/vue';
+import { ref } from 'vue';
 defineProps({
   name: String,
 });
+const url = ref('https://www.humaniti.com/referral/?ftName=john&signupCode=923')
+const shareObj = {
+  title: 'Share this',
+  text: 'But also share that',
+  url: url.value
+}
+async function shareTheCode() {
+  
+    await Share.share(shareObj).then(() => console.log('Successfully share')).catch(() => {
+      console.log('Share is cancelled');
+    });
+}
 </script>
-
 <style scoped>
 #container {
   text-align: center;
